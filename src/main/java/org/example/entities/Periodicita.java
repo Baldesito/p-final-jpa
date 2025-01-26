@@ -5,4 +5,3 @@ public enum Periodicita {
     MENSILE,
     SEMESTRALE
 }
-

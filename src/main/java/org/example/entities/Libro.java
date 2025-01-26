@@ -1,6 +1,5 @@
 package org.example.entities;
 
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -16,7 +15,6 @@ public class Libro {
     private int numeroPagine;
 
     public Libro() {}
-
 
     public Libro(String codiceISBN, String titolo, String autore, int annoPubblicazione, int numeroPagine) {
         this.codiceISBN = codiceISBN;

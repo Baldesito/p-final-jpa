@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="Utente")
+@Table(name = "Utente")
 public class Utente {
     @Id
     private String numeroTessera;
@@ -15,7 +15,6 @@ public class Utente {
     private LocalDate dataDiNascita;
 
     public Utente() {}
-
 
     public Utente(String numeroTessera, String nome, String cognome, LocalDate dataDiNascita) {
         this.numeroTessera = numeroTessera;
@@ -55,7 +54,6 @@ public class Utente {
     public void setDataDiNascita(LocalDate dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
-
 
     @Override
     public String toString() {

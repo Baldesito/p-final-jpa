@@ -2,23 +2,27 @@ package org.example.entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+
 @Entity
-@Table(name="Prestito")
+@Table(name = "Prestito")
 public class Prestito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @ManyToOne
     private Utente utente;
+
     @ManyToOne
-    private Object elementoPrestato;
+    private Libro elementoPrestato;
+
     private LocalDate dataInizioPrestito;
     private LocalDate dataRestituzionePrevista;
     private LocalDate dataRestituzioneEffettiva;
 
     public Prestito() {}
 
-    public Prestito(long id, Utente utente, Object elementoPrestato, LocalDate dataInizioPrestito, LocalDate dataRestituzionePrevista, LocalDate dataRestituzioneEffettiva) {
+    public Prestito(long id, Utente utente, Libro elementoPrestato, LocalDate dataInizioPrestito, LocalDate dataRestituzionePrevista, LocalDate dataRestituzioneEffettiva) {
         this.id = id;
         this.utente = utente;
         this.elementoPrestato = elementoPrestato;
@@ -43,11 +47,11 @@ public class Prestito {
         this.utente = utente;
     }
 
-    public Object getElementoPrestato() {
+    public Libro getElementoPrestato() {
         return elementoPrestato;
     }
 
-    public void setElementoPrestato(Object elementoPrestato) {
+    public void setElementoPrestato(Libro elementoPrestato) {
         this.elementoPrestato = elementoPrestato;
     }
 
@@ -74,7 +78,6 @@ public class Prestito {
     public void setDataRestituzioneEffettiva(LocalDate dataRestituzioneEffettiva) {
         this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
     }
-
 
     @Override
     public String toString() {

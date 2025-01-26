@@ -3,16 +3,16 @@ package org.example.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "Rivista")
+@Table(name = "Rivista")
 public class Rivista {
     @Id
     private String codiceISBN;
     private String titolo;
     private String autore;
     private int annoPubblicazione;
+
     @Enumerated(EnumType.STRING)
     private Periodicita periodicita;
-
 
     public Rivista() {}
 
